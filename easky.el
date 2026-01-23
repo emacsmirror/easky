@@ -503,6 +503,17 @@ is the implementation."
         (user-error "Command %s not implemented yet, please consider report it to us!" command)))))
 
 ;;;###autoload
+(defun easky-docs ()
+  "Build documentation."
+  (interactive)
+  (easky--exec-with-help
+      (easky-command "docs" "--help") 2 "Select `eask docs' command: "
+    (let ((command (intern (format "easky-docs-%s" command))))
+      (if (fboundp command)
+          (call-interactively command)
+        (user-error "Command %s not implemented yet, please consider report it to us!" command)))))
+
+;;;###autoload
 (defun easky-generate ()
   "Start Eask generate."
   (interactive)
@@ -868,11 +879,11 @@ This can be replaced with `easky-package-install' command."
 ;;; Documentation
 
 ;;;###autoload
-(defun easky-docs ()
-  "Build documentation."
+(defun easky-docs-el2org ()
+  "Build documentation with `el2org'."
   (interactive)
   (let ((pattern (read-string "Files: ")))
-    (easky--display (easky-command "docs" pattern))))
+    (easky--display (easky-command "docs" "el2org" pattern))))
 
 ;;
 ;;; Eask-file Checker

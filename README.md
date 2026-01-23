@@ -15,33 +15,34 @@ it's a package manager and sandbox tools to test and manage your elisp packages.
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [🏆 Features](#-features)
-- [💾 Installation](#-installation)
-  - [🔍 Step 1. Install Eask CLI](#-step-1-install-eask-cli)
-  - [🔍 Step 2. Install `Easky` (this package)](#-step-2-install-easky-this-package)
-    - [package.el](#packageel)
-    - [use-package](#use-package)
-    - [Manual installation](#manual-installation)
-- [🔰 Quick start](#-quick-start)
-- [📇 Support Commands](#-support-commands)
-  - [🔈 Create](#-create)
-  - [🏭 Generate](#-generate)
-  - [📚 Documentation](#-documentation)
-  - [💻 Execution](#-execution)
-  - [🧹 Cleaning](#-cleaning)
-  - [📝 Linting](#-linting)
-  - [🔗 Linking](#-linking)
-  - [🔍 Testing](#-testing)
-  - [🔗 Control DSL](#-control-dsl)
-- [📈 Checker](#-checker)
-- [🔧 Customization](#-customization)
-  - [🧪 Variables](#-variables)
-- [🔌 Plugins](#-plugins)
-  - [📦 `package` module](#-package-module)
-- [🌟 Other packages you may be interested](#-other-packages-you-may-be-interested)
-- [🛠️ Contribute](#-contribute)
-  - [🔬 Development](#-development)
-- [⚜️ License](#-license)
+- [easky](#easky)
+  - [🏆 Features](#-features)
+  - [💾 Installation](#-installation)
+    - [🔍 Step 1. Install Eask CLI](#-step-1-install-eask-cli)
+    - [🔍 Step 2. Install `Easky` (this package)](#-step-2-install-easky-this-package)
+      - [package.el](#packageel)
+      - [use-package](#use-package)
+      - [Manual installation](#manual-installation)
+  - [🔰 Quick start](#-quick-start)
+  - [📇 Support Commands](#-support-commands)
+    - [🔈 Create](#-create)
+    - [📚 Documentation](#-documentation)
+    - [🏭 Generate](#-generate)
+    - [💻 Execution](#-execution)
+    - [🧹 Cleaning](#-cleaning)
+    - [📝 Linting](#-linting)
+    - [🔗 Linking](#-linking)
+    - [🔍 Testing](#-testing)
+    - [🔗 Control DSL](#-control-dsl)
+  - [📈 Checker](#-checker)
+  - [🔧 Customization](#-customization)
+    - [🧪 Variables](#-variables)
+  - [🔌 Plugins](#-plugins)
+    - [📦 `package` module](#-package-module)
+  - [🌟 Other packages you may be interested](#-other-packages-you-may-be-interested)
+  - [🛠️ Contribute](#-contribute)
+    - [🔬 Development](#-development)
+  - [⚜️ License](#-license)
 
 <!-- markdown-toc end -->
 
@@ -183,6 +184,14 @@ commands:
 | `easky-create-elpa`       | Create a new ELPA using `github-elpa`. |
 | `easky-create-el-project` | Create a new ELPA using `el-project`.  |
 
+### 📚 Documentation
+
+Commands used to build documentation site.
+
+| Commands            | Description                          |
+|---------------------|--------------------------------------|
+| `easky-docs-el2org` | Build documentation with [el2org][]. |
+
 ### 🏭 Generate
 
 | Commands                            | Description                                     |
@@ -201,14 +210,6 @@ commands:
 | `easky-generate-workflow-github`    | Generate [GitHub Actions][] test file           |
 | `easky-generate-workflow-gitlab`    | Generate [GitLab Runner][] test file            |
 | `easky-generate-workflow-travis-ci` | Generate [Travis CI][] test file                |
-
-### 📚 Documentation
-
-Commands used to build documentation site.
-
-| Commands     | Description          |
-|--------------|----------------------|
-| `easky-docs` | Build documentation. |
 
 ### 💻 Execution
 
@@ -421,6 +422,8 @@ See [`LICENSE`](./LICENSE.txt) for details.
 [GitHub Actions]: https://github.com/features/actions
 [GitLab Runner]: https://docs.gitlab.com/runner/
 [Travis CI]: https://www.travis-ci.com/
+
+[el2org]: https://github.com/tumashu/el2org
 
 [ert]: https://www.gnu.org/software/emacs/manual/html_node/ert/
 [ert-runner]: https://github.com/rejeep/ert-runner.el
